@@ -11,7 +11,7 @@ public class LambdaHandlerTest {
     @Test
     public void test(){
         LambdaHandler lambdaHandler = new LambdaHandler();
-        LOG.info("{}", lambdaHandler.handle("String"));
+        LOG.info("{}", lambdaHandler.handle(new TestPOJO("Test")));
     }
 
 }
