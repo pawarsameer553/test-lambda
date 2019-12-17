@@ -1,0 +1,9 @@
+target/
+*.launch
+.idea/
+*.swp
+*.tmp
+*.bak
+*.iml
+.attach_pid23370
+dependency-reduced-pom.xml
