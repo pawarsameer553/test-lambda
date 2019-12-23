@@ -8,11 +8,15 @@ public class LambdaHandler {
 
     private static final Logger LOG = LoggerFactory.getLogger(LambdaHandler.class);
 
-    public Object handle(Object payload, Context context) {
-        return handle(payload);
+    public LambdaHandler(){
+        LOG.info("TEST_ENV_PROPERTY", System.getProperty("TEST_ENV_PROPERTY"));
     }
 
-    protected Object handle(Object payload){
+    public Object handle(Object payload, Context context) {
+        return handle((String) payload);
+    }
+
+    protected Object handle(String payload){
         LOG.debug("payload : {}", payload);
         return payload;
     }
